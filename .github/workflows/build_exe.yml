@@ -26,7 +26,7 @@ jobs:
       - name: Build executable
         run: |
           # Create a simple entry point script
-          echo 'import sys; from abuseacl import main; sys.exit(main())' > abuseacl_launcher.py
+          echo 'import sys; from abuseACL.__main__ import main; sys.exit(main())' > abuseacl_launcher.py
           # Use this entry script for PyInstaller
           pyinstaller --onefile --name abuseacl_windows_amd64.exe abuseacl_launcher.py
       
